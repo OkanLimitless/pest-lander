@@ -86,7 +86,7 @@ const stepTitles = [
 ]
 const stepDescriptions = [
   'Make a zero-obligation phone call to (866) 227-3302 and get connected with a local pest control pro right away.',
-  'We'll help you set up a convenient appointment to quickly take care of your pest issue — even same-day pest control when available.',
+  "We'll help you set up a convenient appointment to quickly take care of your pest issue — even same-day pest control when available.",
   'A licensed technician will arrive, inspect, and treat your home for pests. Enjoy peace of mind with our guarantee!',
 ]
 
