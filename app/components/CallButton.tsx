@@ -8,6 +8,17 @@ interface CallButtonProps {
   variant?: 'primary' | 'secondary'
 }
 
+const formatPhoneNumber = (phoneNumber: string) => {
+  // Remove any non-digit characters
+  const cleaned = phoneNumber.replace(/\D/g, '')
+  // Format as (XXX) XXX-XXXX
+  const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/)
+  if (match) {
+    return `(${match[1]}) ${match[2]}-${match[3]}`
+  }
+  return phoneNumber
+}
+
 export default function CallButton({
   phoneNumber,
   className = '',
@@ -24,7 +35,7 @@ export default function CallButton({
       className={`${baseClasses} ${variantClasses} ${className}`}
     >
       <PhoneIcon className="w-6 h-6" />
-      Call Now: {phoneNumber}
+      Call Now: {formatPhoneNumber(phoneNumber)}
     </a>
   )
 } 
