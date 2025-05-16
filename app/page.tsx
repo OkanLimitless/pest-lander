@@ -64,14 +64,14 @@ const trustBullets = [
 const testimonials = [
   {
     name: 'Margaret L.',
-    text: 'As a mom with two little kids, I was panicked when we found bed bugs. I called and someone was at our house in under 2 hours. They were professional, fast, and safe with everything they used. So grateful!',
-    stars: 5,
+    text: "As a mom with two little kids, I was panicked when we found bed bugs. I called and someone was at our house in under 2 hours. They were professional, fast, and safe with everything they used. So grateful!",
+    stars: 5
   },
   {
     name: 'Jessica R.',
-    text: 'I'm a senior living alone and was terrified when I saw mice in my kitchen. I called and they came the same day! The technician was kind, respectful, and explained everything. I finally feel safe in my home again.',
-    stars: 5,
-  },
+    text: "I'm a senior living alone and was terrified when I saw mice in my kitchen. I called and they came the same day! The technician was kind, respectful, and explained everything. I finally feel safe in my home again.",
+    stars: 5
+  }
 ]
 
 const stepIcons = [
