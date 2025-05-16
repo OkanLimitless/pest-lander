@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { PhoneIcon, ShieldCheckIcon, ClockIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
-import { motion } from 'framer-motion'
+import AnimatedSection from './components/AnimatedSection'
+import CallButton from './components/CallButton'
 
 const PHONE_NUMBER = '+18662273302'
 
@@ -41,7 +42,7 @@ export default function Home() {
       <section className="relative bg-gradient-to-b from-primary to-primary/90 text-white">
         <div className="container-custom section-padding">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <AnimatedSection
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -53,15 +54,9 @@ export default function Home() {
                 Get rid of pests quickly and effectively with our expert pest control services. 
                 Free consultation and guaranteed results.
               </p>
-              <a
-                href={`tel:${PHONE_NUMBER}`}
-                className="btn-secondary inline-flex items-center gap-2 text-lg"
-              >
-                <PhoneIcon className="w-6 h-6" />
-                Call Now: {PHONE_NUMBER}
-              </a>
-            </motion.div>
-            <motion.div
+              <CallButton phoneNumber={PHONE_NUMBER} variant="secondary" />
+            </AnimatedSection>
+            <AnimatedSection
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -74,7 +69,7 @@ export default function Home() {
                 className="object-cover"
                 priority
               />
-            </motion.div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -87,7 +82,7 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <AnimatedSection
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -97,7 +92,7 @@ export default function Home() {
                 <feature.icon className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -106,20 +101,20 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding bg-secondary text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Rid of Pests?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Don't let pests take over your home or business. Call us now for a free consultation 
-            and let our experts help you achieve a pest-free environment.
-          </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            className="btn-primary inline-flex items-center gap-2 text-lg bg-white text-secondary hover:bg-gray-100"
-          >
-            <PhoneIcon className="w-6 h-6" />
-            Call Now: {PHONE_NUMBER}
-          </a>
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Get Rid of Pests?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Don't let pests take over your home or business. Call us now for a free consultation 
+              and let our experts help you achieve a pest-free environment.
+            </p>
+            <CallButton 
+              phoneNumber={PHONE_NUMBER} 
+              variant="primary"
+              className="bg-white text-secondary hover:bg-gray-100"
+            />
+          </AnimatedSection>
         </div>
       </section>
 
@@ -131,7 +126,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {pests.map((pest, index) => (
-              <motion.div
+              <AnimatedSection
                 key={pest}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -139,7 +134,7 @@ export default function Home() {
                 className="bg-white p-4 rounded-lg shadow text-center hover:shadow-md transition-shadow"
               >
                 <p className="font-semibold text-gray-800">{pest}</p>
-              </motion.div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -148,20 +143,16 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="section-padding bg-primary text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Get Professional Pest Control Today
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Our expert technicians are ready to help you eliminate pests and prevent future infestations. 
-            Call now for immediate assistance!
-          </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            className="btn-secondary inline-flex items-center gap-2 text-lg"
-          >
-            <PhoneIcon className="w-6 h-6" />
-            Call Now: {PHONE_NUMBER}
-          </a>
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Get Professional Pest Control Today
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Our expert technicians are ready to help you eliminate pests and prevent future infestations. 
+              Call now for immediate assistance!
+            </p>
+            <CallButton phoneNumber={PHONE_NUMBER} variant="secondary" />
+          </AnimatedSection>
         </div>
       </section>
     </main>
