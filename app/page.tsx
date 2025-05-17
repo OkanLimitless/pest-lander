@@ -7,7 +7,7 @@ import CallButton from './components/CallButton'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-const PHONE_NUMBER = '+18662273302'
+const PHONE_NUMBER = '+1 (866) 227-3302'
 
 const trustIcons = [
   { icon: ShieldCheckIcon, label: 'Local Quality Pros' },
@@ -86,7 +86,7 @@ const stepTitles = [
   'Get Pest Control',
 ]
 const stepDescriptions = [
-  'Make a zero-obligation phone call to (866) 227-3302 and get connected with a local pest control pro right away.',
+  'Make a zero-obligation phone call to +1 (866) 227-3302 and get connected with a local pest control pro right away.',
   "We'll help you set up a convenient appointment to quickly take care of your pest issue — even same-day pest control when available.",
   'A licensed technician will arrive, inspect, and treat your home for pests. Enjoy peace of mind with our guarantee!',
 ]
@@ -177,7 +177,7 @@ export default function Home() {
               Every day you wait, pests multiply. Bed bugs disrupt sleep and are hard to eliminate without help. Roaches spread bacteria. Mice chew through wires and can cause fires. Wasps and hornets are dangerous to kids and trigger allergic reactions.
             </p>
             <p className="text-red-700 font-semibold">
-              The longer you delay, the worse it gets. Call us — we're ready to come today <span className="underline">(866) 227-3302</span>
+              The longer you delay, the worse it gets. Call us — we're ready to come today <span className="underline">+1 (866) 227-3302</span>
             </p>
           </div>
         </section>
@@ -232,7 +232,7 @@ export default function Home() {
             ))}
           </ul>
           <p className="mt-4 text-gray-700">
-            Get a FREE consultation & expert evaluation today! We provide emergency pest control without the stress! Call at <span className="underline">(866) 227-3302</span>
+            Get a FREE consultation & expert evaluation today! We provide emergency pest control without the stress! Call at <span className="underline">+1 (866) 227-3302</span>
           </p>
         </section>
 
