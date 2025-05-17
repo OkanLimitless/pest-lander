@@ -159,7 +159,7 @@ export default function Home() {
               <h3 className="text-lg md:text-2xl font-bold mb-2">Fully Trained Pest Experts Standing By</h3>
               <p className="text-gray-700 mb-2">Call Now For Your FREE Quote!</p>
               <CallButton phoneNumber={PHONE_NUMBER} variant="primary" className="!bg-red-600 hover:!bg-red-700 !text-white !px-6 !py-3 !rounded-full !shadow-lg font-bold text-base w-fit" />
-              <span className="text-xs text-gray-500 mt-2">Your City Pest Exterminator</span>
+              <span className="text-xs text-gray-500 mt-2">Your Local BigShield.pro Expert</span>
             </div>
           </div>
         </section>

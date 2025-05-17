@@ -140,8 +140,8 @@ export default function Footer() {
                   </li>
                   <li className="flex items-center space-x-3">
                     <EnvelopeIcon className="h-5 w-5 text-gray-400" />
-                    <a href="mailto:info@pestlander.com" className="text-gray-300 hover:text-white">
-                      info@pestlander.com
+                    <a href="mailto:info@bigshield.pro" className="text-gray-300 hover:text-white">
+                      info@bigshield.pro
                     </a>
                   </li>
                 </ul>
@@ -151,7 +151,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-700 pt-8">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; {new Date().getFullYear()} PestLander. All rights reserved.
+            &copy; {new Date().getFullYear()} BigShield.pro. All rights reserved.
           </p>
         </div>
       </div>
