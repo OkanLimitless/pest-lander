@@ -1,10 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, PhoneIcon, ExclamationTriangleIcon, UserIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, PhoneIcon, ExclamationTriangleIcon, UserIcon, ArrowRightIcon, TagIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/24/solid'
 import AnimatedSection from './components/AnimatedSection'
 import CallButton from './components/CallButton'
 import Footer from './components/Footer'
+import DynamicLocation from './components/DynamicLocation'
 
 const PHONE_NUMBER = '+1 (866) 227-3302'
 
@@ -110,7 +111,7 @@ export default function Home() {
               <span className="uppercase text-xs tracking-wider font-bold text-white/80">USA</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">
-              Fast Pest Control by Local Exterminators
+              Fast Pest Control in <DynamicLocation />
             </h1>
             <h2 className="text-lg md:text-2xl font-semibold text-white mb-4">
               Fast, Safe, Same-Day Pest Control Service
@@ -118,6 +119,16 @@ export default function Home() {
             <p className="text-base md:text-lg text-white mb-6 font-medium">
               Get Rid of Pesky Pests Today — Call Now!
             </p>
+
+            {/* NEW CUSTOMER DISCOUNT BANNER */}
+            <div className="bg-gradient-to-r from-yellow-500 to-amber-600 py-3 px-6 rounded-lg mb-4 shadow-lg transform -rotate-1 w-full max-w-lg">
+              <div className="flex items-center justify-center gap-2">
+                <TagIcon className="h-5 w-5 text-white" />
+                <p className="font-bold text-white text-lg">NEW CUSTOMER SPECIAL: 15% OFF FIRST SERVICE</p>
+              </div>
+              <p className="text-white text-sm mt-1">Limited time offer - Call now to claim your discount!</p>
+            </div>
+
             <div className="mb-4">
               <CallButton phoneNumber={PHONE_NUMBER} variant="primary" className="!bg-red-600 hover:!bg-red-700 !text-white !px-8 !py-4 !rounded-full !shadow-xl font-bold text-xl" />
             </div>
@@ -154,10 +165,10 @@ export default function Home() {
             </div>
             <div className="flex-1 p-4 md:p-8 flex flex-col gap-2">
               <span className="text-xs font-bold text-green-700 uppercase mb-1 flex items-center gap-1">
-                <CheckCircleIcon className="w-4 h-4 text-green-500" /> We're Available Now
+                <CheckCircleIcon className="w-4 h-4 text-green-500" /> We're Available Now in <DynamicLocation />
               </span>
               <h3 className="text-lg md:text-2xl font-bold mb-2">Fully Trained Pest Experts Standing By</h3>
-              <p className="text-gray-700 mb-2">Call Now For Your FREE Quote!</p>
+              <p className="text-gray-700 mb-2">Call Now For Your FREE Quote + 15% New Customer Discount!</p>
               <CallButton phoneNumber={PHONE_NUMBER} variant="primary" className="!bg-red-600 hover:!bg-red-700 !text-white !px-6 !py-3 !rounded-full !shadow-lg font-bold text-base w-fit" />
               <span className="text-xs text-gray-500 mt-2">Your Local BigShield.pro Expert</span>
             </div>
@@ -174,9 +185,18 @@ export default function Home() {
             <p className="text-gray-700 mb-2">
               Every day you wait, pests multiply. Bed bugs disrupt sleep and are hard to eliminate without help. Roaches spread bacteria. Mice chew through wires and can cause fires. Wasps and hornets are dangerous to kids and trigger allergic reactions.
             </p>
-            <p className="text-red-700 font-semibold">
+            <p className="text-red-700 font-semibold mb-4">
               The longer you delay, the worse it gets. Call us — we're ready to come today <span className="underline">+1 (866) 227-3302</span>
             </p>
+            
+            {/* DISCOUNT REMINDER */}
+            <div className="bg-gray-100 border-l-4 border-amber-500 p-4 rounded-r-md">
+              <div className="flex items-center">
+                <TagIcon className="h-5 w-5 text-amber-500 mr-2" />
+                <p className="font-bold text-gray-800">Remember: New customers save 15% on their first service!</p>
+              </div>
+              <p className="text-gray-600 text-sm mt-1">This special offer expires soon. Call now to book your appointment.</p>
+            </div>
           </div>
         </section>
 
@@ -230,7 +250,7 @@ export default function Home() {
             ))}
           </ul>
           <p className="mt-4 text-gray-700">
-            Get a FREE consultation & expert evaluation today! We provide emergency pest control without the stress! Call at <span className="underline">+1 (866) 227-3302</span>
+            Get a FREE consultation & expert evaluation today! We provide emergency pest control without the stress! Call at <span className="underline">+1 (866) 227-3302</span> and mention code <span className="font-bold text-amber-600">NEW15</span> for your 15% discount!
           </p>
         </section>
 
