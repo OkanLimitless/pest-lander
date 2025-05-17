@@ -147,7 +147,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden p-6 md:p-0">
             <div className="w-full md:w-1/3 h-40 md:h-48 relative flex-shrink-0">
               <Image
-                src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/images/pest-control-technician.webp"
                 alt="Pest control technician"
                 fill
                 className="object-cover object-center"
