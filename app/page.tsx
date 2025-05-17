@@ -4,7 +4,6 @@ import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, PhoneIcon, ExclamationTria
 import { StarIcon } from '@heroicons/react/24/solid'
 import AnimatedSection from './components/AnimatedSection'
 import CallButton from './components/CallButton'
-import Header from './components/Header'
 import Footer from './components/Footer'
 
 const PHONE_NUMBER = '+1 (866) 227-3302'
@@ -94,8 +93,7 @@ const stepDescriptions = [
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="min-h-screen pt-16">
+      <main className="min-h-screen">
         {/* HERO SECTION */}
         <section className="relative min-h-[600px] flex items-center justify-center bg-black/80">
           <Image
