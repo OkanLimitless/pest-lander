@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, PhoneIcon, StarIcon, ExclamationTriangleIcon, UserIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { ShieldCheckIcon, ClockIcon, CheckCircleIcon, PhoneIcon, ExclamationTriangleIcon, UserIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { StarIcon } from '@heroicons/react/24/solid'
 import AnimatedSection from './components/AnimatedSection'
 import CallButton from './components/CallButton'
 import Header from './components/Header'
@@ -123,11 +124,11 @@ export default function Home() {
               <CallButton phoneNumber={PHONE_NUMBER} variant="primary" className="!bg-red-600 hover:!bg-red-700 !text-white !px-8 !py-4 !rounded-full !shadow-xl font-bold text-xl" />
             </div>
             <div className="flex flex-col items-center gap-1 mb-6">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-                ))}
-              </div>
+                              <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                   <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
               <span className="text-white font-semibold text-sm">Get a FREE Up-Front Quote</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl mt-6">
@@ -146,7 +147,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden p-6 md:p-0">
             <div className="w-full md:w-1/3 h-40 md:h-48 relative flex-shrink-0">
               <Image
-                src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=400&q=80"
                 alt="Pest control technician"
                 fill
                 className="object-cover object-center"
@@ -207,11 +208,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t) => (
               <div key={t.name} className="bg-gray-50 rounded-xl shadow p-6 flex flex-col gap-2">
-                <div className="flex items-center gap-2 mb-2">
-                  {[...Array(t.stars)].map((_, i) => (
-                    <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-                  ))}
-                </div>
+                                  <div className="flex items-center gap-2 mb-2">
+                    {[...Array(t.stars)].map((_, i) => (
+                     <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                    ))}
+                  </div>
                 <p className="text-gray-800 italic">"{t.text}"</p>
                 <span className="font-semibold text-gray-900 mt-2">{t.name}</span>
               </div>
