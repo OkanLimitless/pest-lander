@@ -2,8 +2,9 @@
 
 import { MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import CallButton from './CallButton'
+import Image from 'next/image'
 
-const PHONE_NUMBER = '+18662273302'
+const PHONE_NUMBER = '+1 (866) 227-3302'
 
 const navigation = {
   services: [
@@ -63,10 +64,13 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <div className="h-12 w-48 relative">
-              {/* Replace with actual logo */}
-              <div className="absolute inset-0 bg-white/10 rounded-lg flex items-center justify-center">
-                <span className="text-xl font-bold text-white">PestLander</span>
-              </div>
+              <Image 
+                src="/images/bigshield-logo.png" 
+                alt="BigShield.pro Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <p className="text-base text-gray-300">
               Professional pest control services you can trust. Available 24/7 for all your pest control needs.

@@ -6,8 +6,8 @@ import StickyTopBar from './components/StickyTopBar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Pest Control Landing Page',
-  description: 'Fast, safe, and professional pest control services. Call now for a free quote!',
+  title: 'BigShield.pro - Fast Pest Control by Local Exterminators',
+  description: 'Professional pest control services by local exterminators. Fast, safe, and effective - Call now for a free quote!',
 }
 
 export default function RootLayout({

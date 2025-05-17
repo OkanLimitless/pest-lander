@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import CallButton from './CallButton'
 
-const PHONE_NUMBER = '+18662273302'
+const PHONE_NUMBER = '+1 (866) 227-3302'
 
 const navigation = [
   { name: 'Services', href: '#services' },
@@ -24,12 +24,15 @@ export default function Header() {
           {/* Logo */}
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Pest Control Services</span>
+              <span className="sr-only">BigShield.pro</span>
               <div className="h-12 w-48 relative">
-                {/* Replace with actual logo */}
-                <div className="absolute inset-0 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="text-xl font-bold text-primary">PestLander</span>
-                </div>
+                <Image 
+                  src="/images/bigshield-logo.png" 
+                  alt="BigShield.pro Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
             </a>
           </div>
@@ -72,12 +75,15 @@ export default function Header() {
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Pest Control Services</span>
+                  <span className="sr-only">BigShield.pro</span>
                   <div className="h-8 w-32 relative">
-                    {/* Replace with actual logo */}
-                    <div className="absolute inset-0 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <span className="text-lg font-bold text-primary">PestLander</span>
-                    </div>
+                    <Image 
+                      src="/images/bigshield-logo.png" 
+                      alt="BigShield.pro Logo"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
                   </div>
                 </a>
                 <button

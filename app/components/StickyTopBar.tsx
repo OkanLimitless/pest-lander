@@ -2,7 +2,7 @@
 
 import CallButton from './CallButton'
 
-const PHONE_NUMBER = '+18662273302'
+const PHONE_NUMBER = '+1 (866) 227-3302'
 
 export default function StickyTopBar() {
   return (
