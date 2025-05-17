@@ -147,7 +147,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden p-6 md:p-0">
             <div className="w-full md:w-1/3 h-40 md:h-48 relative flex-shrink-0">
               <Image
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=400&q=80"
+                src="https://img.freepik.com/premium-photo/pest-control-kill-sofa-pesticide-insect-uniform-cockroach-termite-exterminator-generative-ai_163305-190863.jpg"
                 alt="Pest control technician"
                 fill
                 className="object-cover object-center"
