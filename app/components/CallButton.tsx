@@ -1,11 +1,13 @@
 'use client'
 
 import { PhoneIcon } from '@heroicons/react/24/outline'
+import React from 'react'
 
 interface CallButtonProps {
   phoneNumber: string
   className?: string
   variant?: 'primary' | 'secondary'
+  children?: React.ReactNode
 }
 
 const formatPhoneNumber = (phoneNumber: string) => {
@@ -22,7 +24,8 @@ const formatPhoneNumber = (phoneNumber: string) => {
 export default function CallButton({
   phoneNumber,
   className = '',
-  variant = 'primary'
+  variant = 'primary',
+  children
 }: CallButtonProps) {
   const baseClasses = 'inline-flex items-center gap-2 text-lg'
   const variantClasses = variant === 'primary' 
@@ -34,8 +37,12 @@ export default function CallButton({
       href={`tel:${phoneNumber}`}
       className={`${baseClasses} ${variantClasses} ${className}`}
     >
-      <PhoneIcon className="w-6 h-6" />
-      Call Now: {formatPhoneNumber(phoneNumber)}
+      {children || (
+        <>
+          <PhoneIcon className="w-6 h-6" />
+          Call Now: {formatPhoneNumber(phoneNumber)}
+        </>
+      )}
     </a>
   )
 } 
