@@ -7,6 +7,7 @@ import DynamicLocation from './components/DynamicLocation'
 import StepForm from './components/StepForm'
 import Footer from './components/Footer'
 import AnimatedSection from './components/AnimatedSection'
+import CallPopup from './components/CallPopup'
 
 const PHONE_NUMBER = '+1 (866) 227-3302'
 
@@ -50,6 +51,9 @@ const whyCallNow = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100 pb-24">
+      {/* Call Popup Component */}
+      <CallPopup phoneNumber={PHONE_NUMBER} />
+      
       {/* Fixed App-Like Header */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-40 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
